@@ -5,12 +5,12 @@ import React, { Component } from "react";
  * so it can be a Stateless Functional Component
  * it's a Controlled Component
  */
-const Like = (props) => {
+const Like = ({ liked, onClick }) => {
   let classes = "fa fa-heart";
-  if (!props.liked) classes += "-o";
+  if (!liked) classes += "-o";
   return (
     <i
-      onClick={props.onClick}
+      onClick={onClick}
       className={classes}
       style={{ cursor: "pointer" }}
       aria-hidden="true"
