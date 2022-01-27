@@ -7,6 +7,7 @@ import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
 import MovieForm from "./components/movieForm";
 import LoginForm from "./components/loginForm";
+import RegisterForm from "./components/registerForm";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Navigate to="/movies" />} />
+          <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/movies/:id" element={<MovieForm />} />
           <Route path="/movies" element={<Movies />} />
